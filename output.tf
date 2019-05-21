@@ -1,11 +1,29 @@
-output "gcp-object-url" {
-    value = "https://storage.googleapis.com/${google_storage_bucket.terraform-storage-122129.name}/${google_storage_bucket_object.mona-lisa.name}"
+output "vpc_id" {
+  description = "VPC ID"
+  value       = "${module.exodus-prod.vpc_id}"
 }
 
-output "assets-url" {
-    value = "https://storage.googleapis.com/${google_storage_bucket.terraform-storage-122129.name}/${google_storage_bucket_object.css.name}"
+output "vpc_cidr_block" {
+  description = "VPC CIDR Block"
+  value       = ["${module.exodus-prod.vpc_cidr_block}"]
 }
 
-output "aws-elb-dns" {
-    value = "http://${aws_alb.terraform-alb.dns_name}:8097"
+output "private_subnets" {
+  description = "Private Subet IDs"
+  value       = ["${module.exodus-prod.private_subnets}"]
+}
+
+output "public_subnets" {
+  description = "Public Subet IDs"
+  value       = ["${module.exodus-prod.public_subnets}"]
+}
+
+
+output "azs" {
+  description = "Availability zones of VPC"
+  value       = ["${module.exodus-prod.azs}"]
+}
+
+output "node-weather-public-ip" {
+    value = ["${aws_instance.node-weather.*.public_ip}"]
 }

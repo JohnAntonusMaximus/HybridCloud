@@ -1,22 +1,10 @@
-terraform-VPC = "vpc-02f1fc67"
+amazon-linux = "ami-015954d5e5548d13b"
 
-terraform-sg = "sg-8b1175c0"
+application_target_port = "3000"
 
-subnet-us-east-1a = "subnet-60ceb839"
+ssh_key = "exodus"
 
-subnet-us-east-1b  = "subnet-3e4fde5b"
+sgexodus = "sgexodus"
 
-subnet-us-east-1c  = "subnet-a9ea7182"
 
-amazon-linux = "ami-14c5486b"
-
-loadbalancer_HTTP_listen_port = "8097"
-
-application_target_port = "8097"
-
-ssh_key = "terraform"
-
-production = "production"
-
-publicReadObject = "READER:allUsers"
  
